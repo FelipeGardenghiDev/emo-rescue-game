@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emo Rescue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="game-shell">
+      <div class="game-copy">
+        <p class="eyebrow">Mini gamezinhu &lt;3</p>
+        <h1>Emo Rescue</h1>
+        <p>
+          Guie a garota ruiva por 3 fases curtinhas para salvar o garoto emo.
+        </p>
+        <ul>
+          <li><strong>Setas</strong> ou <strong>A / D</strong> para andar</li>
+          <li><strong>W</strong>, <strong>Seta para cima</strong> ou <strong>Espaço</strong> para pular</li>
+          <li><strong>Enter</strong> para começar ou reiniciar</li>
+          <li><strong>P</strong> ou <strong>Esc</strong> para pausar</li>
+        </ul>
+        <div class="game-actions">
+          <label class="ui-label" for="phase-select">Fase inicial</label>
+          <select id="phase-select" class="ui-select" aria-label="Selecionar fase inicial">
+            <option value="0">Fase 1 - Telhados de Neon</option>
+            <option value="1">Fase 2 - Beco dos Espinhos</option>
+            <option value="2">Fase 3 - Cela de Neon</option>
+          </select>
+          <button id="start-button" class="ui-button" type="button">
+            Jogar agora
+          </button>
+          <button id="pause-button" class="ui-button" type="button" disabled>
+            Pausar
+          </button>
+          <button id="mute-toggle" class="ui-button" type="button" aria-pressed="false">
+            Som: ligado
+          </button>
+          <button id="fullscreen-button" class="ui-button" type="button">
+            Tela cheia
+          </button>
+        </div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="game" width="960" height="540" aria-label="Jogo de plataforma 2D"></canvas>
+        <div class="mobile-orientation-hint" aria-hidden="true">
+          <span class="phone-rotate-icon"></span>
+          <span>Para jogar melhor no celular, vire na horizontal ou use tela cheia.</span>
+        </div>
+        <div class="touch-controls" aria-label="Controles de toque">
+          <button class="touch-button" type="button" data-control="left" aria-label="Mover para a esquerda">
+            &#9664;
+          </button>
+          <button class="touch-button" type="button" data-control="jump" aria-label="Pular">
+            Pular
+          </button>
+          <button class="touch-button" type="button" data-control="right" aria-label="Mover para a direita">
+            &#9654;
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
